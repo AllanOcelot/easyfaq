@@ -13,4 +13,5 @@
  add_action( 'wp_head', 'easyFAQ' );
 function easyFAQ() {
   echo "<link rel='stylesheet'  href='/wp-content/plugins/easyfaq/assets/main.css' type='text/css' media='all'>";
-} 
+  #Toms first Commit
+}
