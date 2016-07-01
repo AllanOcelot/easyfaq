@@ -1,0 +1,42 @@
+
+
+.easy-faq-container{
+  float:left;
+  width: 100%;
+  height: auto;
+  margin:0 0 20px 0;
+  padding: 0;
+}
+.easy-faq-container li{
+  float:left;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-bottom: 1px solid #ccc;
+}
+.easy-faq-container li .title{
+  float:left;
+  width: 100%;
+  height: auto;
+  min-height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  background-color: #415e7e;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.6s;
+}
+.easy-faq-container li .title:hover ,
+.easy-faq-container li.active .title{
+  background-color: #7693b2;
+  transition: all 0.3s;
+}
+.easy-faq-container li .content{
+  float:left;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 20px;
+  display: none;
+}
