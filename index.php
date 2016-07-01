@@ -1,5 +1,5 @@
 <?php
-/**
+/*
  * Plugin Name: Wordpress EasyFAQs
  * Plugin URI:
  * Description: This plugin adds very quick to use FAQ functions to pages.
@@ -22,14 +22,10 @@ add_action( 'wp_enqueue_scripts', 'easyFAQCSS' );
 //Hook JS into footer
 function easyFAQJSFiles(){
   wp_register_script( 'easyFAQJS', plugins_url( '/assets/easyFAQ.js', __FILE__ ) );
-  wp_enqueue_script('jquery'); 
+  wp_enqueue_script('jquery');
   wp_enqueue_script( 'easyFAQJS' );
 }
 add_action( 'wp_enqueue_scripts', 'easyFAQJSFiles' );
-
-
-
-
 
  //Spit out dummy HTML
  function exampleFAQOutput(){
