@@ -3,6 +3,8 @@ Wordpress EasyFAQ is a simple, lightweight plugin made with a very simple purpos
 This plugin add's a new custom post type and a shortcode that will generate an accordian displaying your FAQ within a page. Simple and easy to use!.
 
 
+![Easy FAQ in Action](https://github.com/AllanOcelot/easyfaq/assets/image.png)
+
 #Installation:
 To install this plugin, either download and install via wordpress or simply clone the latest release into your plugins folder.
 
