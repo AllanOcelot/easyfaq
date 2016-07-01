@@ -26,9 +26,25 @@
   color: #fff;
   cursor: pointer;
   transition: all 0.6s;
+  position: relative;
 }
+.easy-faq-container li .title:after{
+  font-family: fontAwesome;
+  content: "\f078";
+  font-size: 20px;
+  color: #fff;
+  right:20px;
+  top:0px;
+  line-height:50px;
+  z-index: 10;
+  position: absolute;
+}
+.easy-faq-container li .title.active:after{
+  content:"\f077";
+}
+
 .easy-faq-container li .title:hover ,
-.easy-faq-container li.active .title{
+.easy-faq-container li .title.active{
   background-color: #7693b2;
   transition: all 0.3s;
 }
