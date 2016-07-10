@@ -1,3 +1,5 @@
+![EasyPages: FAQ](http://i.imgur.com/QNAAFXh.png)
+
 # Welcome
 This is a simple FAQ plugin to be used within WordPress. It allows for you to easily add a FAQ section to any page through the use of a shortcode and a custom post type.
 
@@ -27,7 +29,8 @@ To insert the FAQ sections you just made simply goto any of your websites pages 
 * Feedback system (Per question? Per FAQ page?)
 * "Ask a new question" - Process, allowing visitors to ask a question and the site owner to respond.
 
-# Notes
-This is a small personal project that I hope others find useful. It's aim was to teach a co-worker git and myself Wordpress plugin development. This plugin uses [Font Awesome](http://fontawesome.io/) - If you don't have it, you simply won't get icons.
+#Credit
+This plugin was created by Allan, over at [A Work Of Code](http://www.aworkofcode.com).
 
-Any bugs or features you would like to see? We'd love to hear from you.
+# Notes
+This plugin uses [Font Awesome](http://fontawesome.io/) - If you don't have it, you simply won't get icons.
