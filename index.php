@@ -1,11 +1,11 @@
 <?php
 /*
- * Plugin Name: Wordpress EasyFAQs
+ * Plugin Name: EasyPages FAQs
  * Plugin URI:
  * Description: This plugin adds very quick to use FAQ functions to pages.
  * Version: 1.0.0
  * Author: Allan McKernan, Thomas Reeve
- * Author URI:
+ * Author URI: https://twitter.com/WebOcelot
  * License: GPL2
  */
 
