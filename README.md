@@ -9,8 +9,6 @@ In order to use the plugin simply download to your plugins folder and active in 
 To add an FAQ - add a new post to the 'FAQS' post type on the left sidebar.
 You can pop anything you'd like into the content -  images, video, heck even memes if you'd like.
 
-![Easy FAQ Custom Post Type](http://i.imgur.com/iLSTZdU.jpg)
-
 To add an FAQ display to an existing page, simply edit the page and add the below short code.
 This will add a functioning FAQ section, there are some options below.
 
