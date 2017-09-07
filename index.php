@@ -5,7 +5,7 @@
  * Description: This plugin adds very quick to use FAQ functions to pages.
  * Version: 1.0.0
  * Author: Allan McKernan
- * Author URI: https://twitter.com/WebOcelot
+ * Author URI: http://www.workofcode.com
  * License: GPL2
  */
 
