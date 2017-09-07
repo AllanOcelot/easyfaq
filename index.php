@@ -99,11 +99,14 @@ function easyFAQQuery($atts){
 
   //Get user input from the shorttag
   $a = shortcode_atts( array(
-        'colour' => 'default',
-        'foo' => 'something',
-        'bar' => 'something else',
+        'colour'   => 'default',
+        'category' => 'default',
     ), $atts );
 
+  //We return, rather than echo our output as HTML
+  $faqHTML = "";
+
+  //We query our post types here
   $args = array(
   	'post_type' => 'FAQ',
     'posts_per_page' => '-1'
@@ -111,31 +114,35 @@ function easyFAQQuery($atts){
   $the_query = new WP_Query( $args );
 
   // Loop Over Results
-  if ( $the_query->have_posts() ) { ?>
-  	<ul class='easy-faq-container'>
-    <?php
+  if ( $the_query->have_posts() ) {
+    $faqHTML .= "<ul class='easy-faq-container'>";
+
   	while ( $the_query->have_posts() ) {
-  		$the_query->the_post(); ?>
-        <li>
-          <?php
-          if($a['colour'] == 'default'){
-            echo "<div class='title'>";
-          }else{
-            echo "<div class='title' style='background-color:" . $a['colour'] . "'>";
-          }
-          ?>
-            <?php echo the_title(); ?>
-          </div>
-        <div class="content">
-          <?php echo the_content(); ?>
-        </div>
-      </li>
-      <?php
+  		$the_query->the_post();
+        $faqHTML .= "<li>";
+           if($a['colour'] == 'default'){
+              $faqHTML .= "<div class='title'>";
+            }else{
+              $faqHTML .= "<div class='title' style='background-color:" . $a['colour'] . "'>";
+            }
+
+            $faqHTML .= "" . get_the_title() . "";
+
+        $faqHTML .= "</div>";
+
+        $faqHTML .= "<div class='content'>";
+          $faqHTML .= "". get_the_content() . "";
+        $faqHTML .= "</div>";
+      $faqHTML .= "</li>";
   	}
-  	echo '</ul>';
+  	$faqHTML .= "</ul>";
   } else {
   	// no posts found
+    $faqHTML .= "<div class='faq-error-message'> Sorry, there are no FAQ's for this... </div>";
   }
+
+  return $faqHTML;
+  $faqHTML = "";
   /* Restore original Post Data */
   wp_reset_postdata();
 }
