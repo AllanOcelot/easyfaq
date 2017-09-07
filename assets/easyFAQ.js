@@ -15,6 +15,7 @@
             clickedLi.find('.title').addClass('active');
           });
       }
-
    });
+
+   
  });

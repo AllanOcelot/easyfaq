@@ -4,7 +4,7 @@
  * Plugin URI:
  * Description: This plugin adds very quick to use FAQ functions to pages.
  * Version: 1.0.0
- * Author: Allan McKernan, Thomas Reeve
+ * Author: Allan McKernan
  * Author URI: https://twitter.com/WebOcelot
  * License: GPL2
  */
@@ -95,7 +95,14 @@ function easyFAQPostType() {
 ########################################################
 ##### Query the FAQ and put them into our UL ###########
 ########################################################
-function easyFAQQuery(){
+function easyFAQQuery($atts){
+
+  //Get user input from the shorttag
+  $a = shortcode_atts( array(
+        'colour' => 'default',
+        'foo' => 'something',
+        'bar' => 'something else',
+    ), $atts );
 
   $args = array(
   	'post_type' => 'FAQ',
@@ -104,12 +111,21 @@ function easyFAQQuery(){
   $the_query = new WP_Query( $args );
 
   // Loop Over Results
-  if ( $the_query->have_posts() ) {
-  	echo "<ul class='easy-faq-container'>";
+  if ( $the_query->have_posts() ) { ?>
+  	<ul class='easy-faq-container'>
+    <?php
   	while ( $the_query->have_posts() ) {
   		$the_query->the_post(); ?>
-      <li>
-        <div class="title"><?php echo the_title(); ?></div>
+        <li>
+          <?php
+          if($a['colour'] == 'default'){
+            echo "<div class='title'>";
+          }else{
+            echo "<div class='title' style='background-color:" . $a['colour'] . "'>";
+          }
+          ?>
+            <?php echo the_title(); ?>
+          </div>
         <div class="content">
           <?php echo the_content(); ?>
         </div>
