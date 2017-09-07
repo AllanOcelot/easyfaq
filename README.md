@@ -6,31 +6,35 @@ This is a simple FAQ plugin to be used within WordPress. It allows for you to ea
 ![Easy FAQ in Action](http://i.imgur.com/rllGZek.png)
 
 # Installation and Use
-In order to use the plugin simply download or take a clone of the repository and add the folders to your websites plugins folder.
+In order to use the plugin simply download to your Wordpress plugin's folder and active in the backend of wordpress. That's it!.
 
-Once done you will be able to see the plugin as an option to activate within the backend of your WordPress website.
-
-From there you will now have a custom post type FAQs available to use.
-
-To start displaying your FAQ sections you will need to create them in the FAQ custom post type. Simply fill in the title and content for however many sections you would like.
+To add an FAQ - add a new post to the 'FAQS' post type on the left sidebar.
+You can pop anything you'd like into the content -  images, video, heck even memes if you'd like.
 
 ![Easy FAQ Custom Post Type](http://i.imgur.com/iLSTZdU.jpg)
 
-To insert the FAQ sections you just made simply goto any of your websites pages and add the below shortcode.
+To add an FAQ display to an existing page, simply edit the page and add the below short code.
+This will add a functioning FAQ section, there are some options below.
 
 ```
 [easyFAQ]
 ```
 
-# Planned Future Features
-* Allow users to set the SlideUp and SlideDown speed via options page.
-* Allow users to select theme colours for the Accordian via options page.
-* Allow users to change Query results (Amount of posts / Only recent FAQs etc) via shortcode.
-* Feedback system (Per question? Per FAQ page?)
-* "Ask a new question" - Process, allowing visitors to ask a question and the site owner to respond.
+# ShortCode Options
+EasyFAQ is a very simple plugin, but I've tried to give you some basic options to make it robust.
+
+* To set a custom colour for easyFAQ simply add the colour attribute and supply a colour code
+```
+[easyFAQ colour="#000000"]
+```
+* To search only FAQ's by a specific category, provide the category name (This is super useful if you want more than one FAQ across your website!)
+```
+[easyFAQ category="example category"]
+```
+
 
 #Credit
-This plugin was created by Allan, over at [A Work Of Code](http://www.aworkofcode.com).
+This plugin was created by me, Allan - find me at [A Work Of Code](http://www.aworkofcode.com).
 
 # Notes
-This plugin uses [Font Awesome](http://fontawesome.io/) - If you don't have it, you simply won't get icons.
+This plugin uses [Font Awesome](http://fontawesome.io/) - If your website does not have it installed, you won't see the open/close icons.
