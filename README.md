@@ -1,12 +1,10 @@
 ![EasyPages: FAQ](http://i.imgur.com/QNAAFXh.png)
 
 # Welcome
-This is a simple FAQ plugin to be used within WordPress. It allows for you to easily add a FAQ section to any page through the use of a shortcode and a custom post type.
-
-![Easy FAQ in Action](http://i.imgur.com/rllGZek.png)
+This is a simple FAQ plugin to be used within WordPress. It allows for you to easily add multiple accordion style FAQ's across your Wordpress website.
 
 # Installation and Use
-In order to use the plugin simply download to your Wordpress plugin's folder and active in the backend of wordpress. That's it!.
+In order to use the plugin simply download to your plugins folder and active in the backend of Wordpress. That's it!.
 
 To add an FAQ - add a new post to the 'FAQS' post type on the left sidebar.
 You can pop anything you'd like into the content -  images, video, heck even memes if you'd like.
