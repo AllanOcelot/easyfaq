@@ -74,8 +74,9 @@ function easyFAQPostType() {
 		'capability_type'    => 'post',
 		'has_archive'        => false,
 		'hierarchical'       => false,
+    'taxonomies'          => array( 'category' ),
     'menu_icon'          => 'dashicons-format-status',
-		'supports'           => array( 'title', 'editor', 'author')
+		'supports'           => array( 'title', 'editor')
 	);
 
 	register_post_type( 'FAQ', $args );
@@ -106,11 +107,24 @@ function easyFAQQuery($atts){
   //We return, rather than echo our output as HTML
   $faqHTML = "";
 
-  //We query our post types here
-  $args = array(
-  	'post_type' => 'FAQ',
-    'posts_per_page' => '-1'
-  );
+  //We query our post types here, if the user selects a category, we filter the FAQ's by that
+    //Query all
+    if($a['category'] == 'default'){
+      $args = array(
+      	'post_type' => 'FAQ',
+        'posts_per_page' => '-1'
+      );
+    }else{
+      $args = array(
+        'post_type' => 'FAQ',
+        'posts_per_page' => '-1',
+        'category_name' => $a['category']
+      );
+    }
+
+
+
+
   $the_query = new WP_Query( $args );
 
   // Loop Over Results
@@ -138,7 +152,7 @@ function easyFAQQuery($atts){
   	$faqHTML .= "</ul>";
   } else {
   	// no posts found
-    $faqHTML .= "<div class='faq-error-message'> Sorry, there are no FAQ's for this... </div>";
+    $faqHTML .= "<div class='faq-error-message'> Sorry, there are no matching FAQ's. </div>";
   }
 
   return $faqHTML;
